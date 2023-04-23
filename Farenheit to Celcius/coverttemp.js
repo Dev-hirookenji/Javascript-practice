@@ -50,3 +50,11 @@ let b = 3;
 a *= b; //(a = a * b)
 
 console.log(a);
+
+// new for loop
+let names = ["markets", "scarlets", "Ferrer"];
+
+for (const listahan of names) {
+  //from for (let listahan = 0; listahan < names.length; listahan++)
+  console.log(listahan);
+}
