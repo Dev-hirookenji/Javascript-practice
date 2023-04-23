@@ -73,3 +73,15 @@ do {
   console.log(numr);
   numr++;
 } while (numr < 20);*/
+
+function carname(name) {
+  return `The car name is ${name.to}`;
+}
+
+carname("Hotdog");
+//adding using params.reduce
+function price(...params) {
+  const total = params.reduce((prev, next) => prev + next);
+  console.log(`The total is ${total}`);
+}
+price(20, 30, 40);
