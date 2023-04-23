@@ -4,7 +4,7 @@ let f;
 
 function ctof() {
   f = (c * 9) / 5 + 32;
-  return f;
+  return `The temp is: ${f}`;
 }
 console.log(ctof(f));
 
@@ -12,8 +12,7 @@ console.log(ctof(f));
 let f1 = 10;
 let c1;
 function ftoc() {
-  c1 = ((f1 - 32) * 5) / 9;
-  return c1;
+  return (c1 = ((f1 - 32) * 5) / 9);
 }
 console.log(ftoc(c1));
 
@@ -34,3 +33,20 @@ console.log(sum(num1, num2));
 
 console.log((99.1234).toFixed(1));
 console.log((99.1234).toString(2));
+
+//giving values for function parameters
+function myname(fname, lname) {
+  return `${fname} ${lname}`;
+}
+myname.fname = "Scarlet".toUpperCase();
+myname.lname = "Ferrer".replace("Ferrer", "Hotdog".toUpperCase());
+
+console.log("Your name is: " + myname.fname, myname.lname);
+
+//trying assignment ops
+let a = 10;
+let b = 3;
+
+a *= b; //(a = a * b)
+
+console.log(a);
