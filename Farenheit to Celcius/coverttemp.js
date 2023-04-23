@@ -58,3 +58,18 @@ for (const listahan of names) {
   //from for (let listahan = 0; listahan < names.length; listahan++)
   console.log(listahan);
 }
+/*
+//while and do while loop
+let num = 2;
+
+while (num <= 20) {
+  console.log(num);
+  num += 2; // num = num + 2
+}
+
+let numr = 2;
+
+do {
+  console.log(numr);
+  numr++;
+} while (numr < 20);*/
