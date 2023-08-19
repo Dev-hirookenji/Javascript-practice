@@ -1,0 +1,2 @@
+
+printNameAndAge(myName, myAge);

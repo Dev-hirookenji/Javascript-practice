@@ -21,11 +21,11 @@ const obej = {
   fname: "Scarlet",
   lname: "Ferrer",
 };
+obej.fname = "newww";
 console.log(obej.fname);
 // add with function
-let num1 = 5;
-let num2 = 11;
-
+num1 = 500;
+num2 = 1000;
 function sum(num1, num2) {
   return num1 + num2;
 }
@@ -35,13 +35,6 @@ console.log((99.1234).toFixed(1));
 console.log((99.1234).toString(2));
 
 //giving values for function parameters
-function myname(fname, lname) {
-  return `${fname} ${lname}`;
-}
-myname.fname = "Scarlet".toUpperCase();
-myname.lname = "Ferrer".replace("Ferrer", "Hotdog".toUpperCase());
-
-console.log("Your name is: " + myname.fname, myname.lname);
 
 //trying assignment ops
 let a = 10;
@@ -74,14 +67,37 @@ do {
   numr++;
 } while (numr < 20);*/
 
-function carname(name) {
-  return `The car name is ${name.to}`;
-}
-
-carname("Hotdog");
 //adding using params.reduce
 function price(...params) {
-  const total = params.reduce((prev, next) => prev + next);
-  console.log(`The total is ${total}`);
+  return (total = params.reduce((prev, next) => prev + next));
 }
 price(20, 30, 40);
+console.log(`total is: ${total}`);
+
+const mynames = {
+  fname: "Mark",
+  lname: "Ferrer",
+  getdetails() {
+    return `The names are: ${this.fname} ${this.lname}`;
+  },
+};
+console.log(mynames.getdetails());
+/*
+let i = 0;
+while (i < 20) {
+  i += 2;
+  console.log(i);
+}*/
+/* another way of using function */
+function totals(i, j) {
+  return i + j;
+}
+let df = totals(12, 23);
+console.log(df);
+/**/
+function getmyname(firstanme, suranme) {
+  console.log(firstanme, suranme);
+}
+firstanme = "ken";
+suranme = "ken";
+getmyname(firstanme, suranme);
