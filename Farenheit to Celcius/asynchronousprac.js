@@ -16,17 +16,20 @@ surname("ferrer");*/
 
 //! callback function
 const foods = {
-  Fruits: ["apple", "orange", "banana"],
-  Drinks: ["Water", "cola", "juice"],
-}; //selections
+  Fruits: ["banana", "strawberry", "apple"],
+  Drinks: ["juice", "water", "cola"],
+};
 
-function order(foods_choice, drinks_choice, call_productions) {
+function order(fruit_choice, drinks_choice, confirmation_done) {
   console.log(
-    `${foods.Fruits[foods_choice]} and ${foods.Drinks[drinks_choice]} was selected`
+    `The selected fruit is ${foods.Fruits[fruit_choice]} and the drink is ${foods.Drinks[drinks_choice]}`
   );
-  call_productions();
+  confirmation_done();
 }
-function production() {
-  console.log("your order has been processed");
+
+function confirmation() {
+  setTimeout(() => {
+    console.log("done");
+  }, 5000);
 }
-order(2, 0, production);
+order(0, 2, confirmation);
