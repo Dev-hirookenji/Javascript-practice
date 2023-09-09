@@ -1,4 +1,4 @@
-async function apitestcall() {
+async function apicall() {
   let response = await fetch("https://api.genderize.io?name=scarlet");
   if (response.ok) {
     console.log("nice");
@@ -8,4 +8,4 @@ async function apitestcall() {
   let data = await response.json();
   console.log(data);
 }
-apitestcall();
+apicall();
