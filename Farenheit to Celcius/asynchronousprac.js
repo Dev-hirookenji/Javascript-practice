@@ -35,7 +35,7 @@ const shop_is_open = true;
 //     console.log("Sorry, the shop is closed.");
 //   }
 //   confirmed();
-// }
+// }s
 // function confirmation() {
 //   setTimeout(() => {
 //     console.log("Order is complete, next customer please!");
