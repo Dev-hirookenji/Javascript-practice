@@ -38,7 +38,7 @@ const shop_is_open = true;
 // }s
 // function confirmation() {
 //   setTimeout(() => {
-//     console.log("Order is complete, next customer please!");
+//     console.log("Order is complsete, next customer please!");
 //   }, 5000);
 // }
 // order(1, 0, 1, confirmation);
