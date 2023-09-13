@@ -13,16 +13,42 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   </head>
   <body>
+    <nav id="navbarr" class="navbar navbar-expand-lg bg-dark-subtle">
+      <div class="container-fluid">
+        <a href="#" class="class navbar-brand">Vue</a>
+        <ul class="navbar-nav me-auto mb-lg-0">
+          <li class="nav-item">
+            <a href="#" class="nav-link">{{links[0]}}</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">{{links[1]}}</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">{{links[2]}}</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <div id="content" class="container">
-      <h1>Vue Practice</h1>
-      <p>Hello World</p>
+      <h1>{{pageTitle}}</h1>
+      <p>{{pageSubheading}}</p>
     </div>
   </body>
 
   <script>
     Vue.createApp({
       data() {
-        return {};
+        return {
+          links: ["Home", "About", "Contact"],
+        };
+      },
+    }).mount("#navbarr");
+    Vue.createApp({
+      data() {
+        return {
+          pageTitle: "Hello World :)",
+          pageSubheading: "Yey!",
+        };
       },
     }).mount("#content");
   </script>
