@@ -1,18 +1,16 @@
 //!practicing callbacks
 
-// function mynameis(name) {
+// function mynameis(call_lname) {
 //   setTimeout(() => {
-//     console.log(name);
+//     console.log("Ken");
 //   }, 1500);
+//   call_lname();
 // }
-// mynameis("ken");
 
-// function surname(surr) {
-//   setTimeout(() => {
-//     console.log(surr);
-//   }, 1000);
+// function lastname() {
+//   console.log("ferrer");
 // }
-// surname("ferrer");
+// mynameis(lastname);
 
 //! callback function
 const foods = {
@@ -24,24 +22,21 @@ const cut = {
   Dice: ["Dice into 1 piece", "Dice into 2 pieces", "Dice into 3 pieces"],
 };
 const shop_is_open = true;
-// function order(foods_choice, cut_choice, drink_choice, confirmed) {
+
+// function order(food_choice, cut_choice, drink_choice, confirmation) {
 //   if (shop_is_open) {
-//     setTimeout(() => {
-//       console.log(
-//         `My chosen food is ${foods.Fruits[foods_choice]}, then ${cut.Slice[cut_choice]} then my drink is ${foods.Drinks[drink_choice]}`
-//       );
-//     }, 2500);
+//     console.log(
+//       `I want to order ${foods.Fruits[food_choice]} then ${cut.Slice[cut_choice]} and for my drinks I want ${foods.Drinks[drink_choice]}`
+//     );
 //   } else {
 //     console.log("Sorry, the shop is closed.");
 //   }
-//   confirmed();
-// }s
-// function confirmation() {
-//   setTimeout(() => {
-//     console.log("Order is complete, next customer please!");
-//   }, 5000);
+//   confirmation();
 // }
-// order(1, 0, 1, confirmation);
+// function checkout() {
+//   console.log("Thank you for buying");
+// }
+// order(0, 2, 1, checkout);
 
 //!Promise
 
