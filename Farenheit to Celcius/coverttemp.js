@@ -2,16 +2,16 @@
 let c = 10;
 let f;
 
-function ctof() {
+function ctof(f) {
   f = (c * 9) / 5 + 32;
-  return `The temp is: ${f}`;
+  return `The temp in farenheit is: ${f}`;
 }
 console.log(ctof(f));
 
 //f to c
 let f1 = 10;
 let c1;
-function ftoc() {
+function ftoc(c1) {
   return (c1 = ((f1 - 32) * 5) / 9);
 }
 console.log(ftoc(c1));
@@ -101,3 +101,9 @@ function getmyname(firstanme, suranme) {
 firstanme = "ken";
 suranme = "ken";
 getmyname(firstanme, suranme);
+
+function hello(yourname, age) {
+  console.log(`Hello ${yourname} your age is ${age}`);
+}
+hello("Ken", 23);
+hello("Jessa", 24);

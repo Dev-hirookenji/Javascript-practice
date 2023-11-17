@@ -6,7 +6,17 @@
     <title>API Playground</title>
   </head>
   <body>
-    <div class="container"></div>
+    <div class="container">
+      <button onclick="promptme()">Click here</button>
+      <p id="demo"></p>
+    </div>
     <script src="apitest.js"></script>
+    <script>
+      let text;
+      let getname = prompt("Hello", "");
+      console.log(`Hello ${getname}`);
+      text = `Hello ${getname}`;
+    </script>
+    <script src="prmpt.js"></script>
   </body>
 </html>

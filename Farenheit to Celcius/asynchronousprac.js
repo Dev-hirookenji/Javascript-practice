@@ -1,16 +1,18 @@
 //!practicing callbacks
 
-// function mynameis(call_lname) {
+// function call(call_name) {
 //   setTimeout(() => {
-//     console.log("Ken");
+//     console.log("Hello");
 //   }, 1500);
-//   call_lname();
+//   call_name();
 // }
 
-// function lastname() {
-//   console.log("ferrer");
+// function thename() {
+//   setTimeout(() => {
+//     console.log("Mark");
+//   }, 5000);
 // }
-// mynameis(lastname);
+// call(thename);
 
 //! callback function
 const foods = {
@@ -40,27 +42,27 @@ const shop_is_open = true;
 
 //!Promise
 
-function order(time, work) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (shop_is_open) {
-        resolve(work());
-      } else {
-        reject(console.log("We're not serving today"));
-      }
-    }, time);
-  });
-}
-order(2000, () => console.log(`My food is ${foods.Fruits[1]}`))
-  .then(() => {
-    return order(2000, () => console.log(`My drink is a ${foods.Drinks[1]}`));
-  })
-  .then(() => {
-    return order(2000, () => console.log(`Please serve it as ${cut.Slice[2]}`));
-  })
-  .catch(() => {
-    console.log("Sorry, the shop is closed.");
-  })
-  .finally(() => {
-    console.log("Thank you for using the program");
-  });
+// function order(time, work) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       if (shop_is_open) {
+//         resolve(work());
+//       } else {
+//         reject(console.log("We're not serving today"));
+//       }
+//     }, time);
+//   });
+// }
+// order(2000, () => console.log(`My food is ${foods.Fruits[1]}`))
+//   .then(() => {
+//     return order(2000, () => console.log(`My drink is a ${foods.Drinks[1]}`));
+//   })
+//   .then(() => {
+//     return order(2000, () => console.log(`Please serve it as ${cut.Slice[2]}`));
+//   })
+//   .catch(() => {
+//     console.log("Sorry, the shop is closed.");
+//   })
+//   .finally(() => {
+//     console.log("Thank you for using the program");
+//   });

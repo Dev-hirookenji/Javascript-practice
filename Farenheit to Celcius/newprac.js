@@ -1,3 +1,5 @@
+const { BaseTransitionPropsValidators } = require("vue");
+
 //! Basic Switch case
 let letter = "G";
 switch (letter) {
@@ -62,6 +64,7 @@ function add(num1, num2) {
 }
 add(10, 23);
 //! returning a function and scoping
+
 function mynames(fname) {
   const firstname = fname; //stores the first name from the const outside the first tunction
   return function (sname) {
@@ -71,3 +74,23 @@ function mynames(fname) {
 }
 const fullname = mynames("Mark Kenneth");
 console.log(fullname("Ferrer"));
+
+//! using spread parameter
+function total(...addthem) {
+  const result = addthem.reduce((prev, next) => prev + next);
+  return result;
+}
+
+const toAdd = total(29, 30);
+console.log(toAdd);
+
+//car part using return function
+
+function carstats(brand) {
+  const carbrand = `The car brand is ${brand}`;
+  return function (carplates) {
+    return `The car stats are: ${carbrand} while the plate number is: ${carplates}`;
+  };
+}
+const carstatsbrand = carstats("Tesla");
+console.log(carstatsbrand("AVS 156"));

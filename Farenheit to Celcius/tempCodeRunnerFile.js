@@ -1,2 +1,1 @@
 
-printNameAndAge(myName, myAge);
