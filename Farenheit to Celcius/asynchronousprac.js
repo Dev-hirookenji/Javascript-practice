@@ -2,15 +2,15 @@
 
 // function call(call_name) {
 //   setTimeout(() => {
-//     console.log("Hello");
-//   }, 1500);
+//     console.log("Scarlet");
+//   }, 3000);
 //   call_name();
 // }
 
 // function thename() {
 //   setTimeout(() => {
-//     console.log("Mark");
-//   }, 5000);
+//     console.log("Hello");
+//   }, 1000);
 // }
 // call(thename);
 

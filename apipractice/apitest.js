@@ -1,5 +1,5 @@
 //async await
-const url = "https://api.genderize.io?name=scarlet";
+const url = "https://api.genderize.io?name=peter";
 
 async function apicall() {
   let response = await fetch(url);
