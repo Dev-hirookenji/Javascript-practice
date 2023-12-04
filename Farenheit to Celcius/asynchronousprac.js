@@ -15,30 +15,35 @@
 // call(thename);
 
 //! callback function
-const foods = {
-  Fruits: ["banana", "strawberry", "apple"],
-  Drinks: ["juice", "water", "cola"],
-};
-const cut = {
-  Slice: ["Cut into 1 piece", "Cut into 2 pieces", "Cut into 3 pieces"],
-  Dice: ["Dice into 1 piece", "Dice into 2 pieces", "Dice into 3 pieces"],
-};
-const shop_is_open = true;
+// const foods = {
+//   Fruits: ["banana", "strawberry", "apple"],
+//   Drinks: ["juice", "water", "cola"],
+// };
+// const cut = {
+//   Slice: ["Cut into 1 piece", "Cut into 2 pieces", "Cut into 3 pieces"],
+//   Dice: ["Dice into 1 piece", "Dice into 2 pieces", "Dice into 3 pieces"],
+// };
+// const shop_is_open = true;
 
-// function order(food_choice, cut_choice, drink_choice, confirmation) {
+// function order(food_choice, drink_choice, cut_choice, confirmation) {
 //   if (shop_is_open) {
-//     console.log(
-//       `I want to order ${foods.Fruits[food_choice]} then ${cut.Slice[cut_choice]} and for my drinks I want ${foods.Drinks[drink_choice]}`
-//     );
+//     setTimeout(() => {
+//       console.log(
+//         `My orders are ${foods.Fruits[food_choice]}, my drinks is ${foods.Drinks[drink_choice]}, cut my order into ${cut.Slice[cut_choice]}`
+//       );
+//     }, 2500);
+//     confirmation();
 //   } else {
-//     console.log("Sorry, the shop is closed.");
+//     console.log("shop is closed");
 //   }
-//   confirmation();
 // }
-// function checkout() {
-//   console.log("Thank you for buying");
+
+// function confirmorder() {
+//   setTimeout(() => {
+//     console.log("Thank you for your order");
+//   }, 4000);
 // }
-// order(0, 2, 1, checkout);
+// order(2, 1, 0, confirmorder);
 
 //!Promise
 
