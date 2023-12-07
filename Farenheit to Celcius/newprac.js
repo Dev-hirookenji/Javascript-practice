@@ -55,14 +55,10 @@ carparts("Toyota", "Scarlet");
 carparts("Honda", "Ken");
 
 // adding by reference
-let num1;
-let num2;
-let ans;
 function add(num1, num2) {
-  ans = num1 + num2;
-  console.log(ans);
+  return num1 + num2;
 }
-add(10, 23);
+console.log(add(5, 10));
 //! returning a function and scoping
 
 function mynames(fname) {
@@ -87,10 +83,10 @@ console.log(toAdd);
 //car part using return function
 
 function carstats(brand) {
-  const carbrand = `The car brand is ${brand}`;
-  return function (carplates) {
-    return `The car stats are: ${carbrand} while the plate number is: ${carplates}`;
+  const carbrand = brand;
+  return function (platenum) {
+    return `The brand is: ${carbrand} and the plate number is ${platenum}`;
   };
 }
-const carstatsbrand = carstats("Tesla");
-console.log(carstatsbrand("AVS 156"));
+const carfullstats = carstats("Tesla");
+console.log(carfullstats("ABC 124"));
