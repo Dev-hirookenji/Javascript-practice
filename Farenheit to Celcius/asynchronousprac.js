@@ -1,18 +1,18 @@
 //!practicing callbacks
 
-// function call(call_name) {
+// function callme(call_back) {
 //   setTimeout(() => {
-//     console.log("Scarlet");
+//     console.log("Mark");
 //   }, 3000);
-//   call_name();
+//   call_back();
 // }
 
-// function thename() {
+// function hello() {
 //   setTimeout(() => {
 //     console.log("Hello");
-//   }, 1000);
+//   }, 2000);
 // }
-// call(thename);
+// callme(hello);
 
 //! callback function
 // const foods = {
