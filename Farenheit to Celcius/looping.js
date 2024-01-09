@@ -40,10 +40,10 @@ let arr = ["a", "b", "c", "d", "e", "f", "g"];
 // }
 
 //! sorting from highest to lowest vice versa
-// function sortLow(arr1) {
-//   return arr1.sort((a, b) => b - a); //? this is the main algorithm, b - a will make in in descending order while a - b will make it on ascending order
-// }
-// const numberss = [25, 23, 9, 50, 12];
-// const sortednums = sortLow(numberss);
+function sortLow(arr1) {
+  return arr1.sort((a, b) => b - a); //? this is the main algorithm, b - a will make in in descending order while a - b will make it on ascending order
+}
+const numberss = [25, 23, 9, 50, 12];
+const sortednums = sortLow(numberss);
 
-// console.log(sortednums);
+console.log(sortednums);

@@ -82,18 +82,20 @@ const mynames = {
   },
 };
 console.log(mynames.getdetails());
-/*
-let i = 0;
-while (i < 20) {
-  i += 2;
-  console.log(i);
-}*/
+
+// let i = 0;
+// while (i < 20) {
+//   i += 2;
+//   console.log(i);
+// }
+
 /* another way of using function */
 function totals(i, j) {
   return i + j;
 }
 let df = totals(12, 23);
 console.log(df);
+
 /**/
 function getmyname(firstanme, suranme) {
   console.log(firstanme, suranme);

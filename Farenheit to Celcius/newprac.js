@@ -59,6 +59,7 @@ function add(num1, num2) {
   return num1 + num2;
 }
 console.log(add(5, 10));
+
 //! returning a function and scoping
 
 function mynames(fname) {
