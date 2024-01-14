@@ -1,0 +1,15 @@
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.box {
+  margin: 50px;
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+.inbox {
+  padding: 40px 0;
+  text-align: center;
+}

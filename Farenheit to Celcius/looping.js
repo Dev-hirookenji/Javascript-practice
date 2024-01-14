@@ -47,3 +47,11 @@ const numberss = [25, 23, 9, 50, 12];
 const sortednums = sortLow(numberss);
 
 console.log(sortednums);
+//! add using while
+let num1 = 1;
+let num2 = 9;
+while (num1 <= 10) {
+  let total = num1 * num2;
+  console.log(`${num1} * ${num2} = ${total}`);
+  num1++;
+}
