@@ -19,9 +19,20 @@ const products = [
 ];
 
 const getAvailability = products.filter((items) => {
-  //? filter to filter, map to list all.
+  //!filter to filter, map to list all, some and every are almost same in functionality will show boolean results.
   return items.isAvailable;
 });
 const totalprice = getAvailability.reduce((sum, items) => sum + items.Price, 0);
 console.log(getAvailability);
 console.log(totalprice);
+
+//!find
+const findproduct = products.find((items) => {
+  return items.Name === "Hotdog";
+});
+console.log(findproduct);
+
+//!forEach Similar to for loop
+products.forEach((item) => {
+  console.log(item);
+});
