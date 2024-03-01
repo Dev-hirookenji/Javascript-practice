@@ -60,18 +60,6 @@ function add(num1, num2) {
 }
 console.log(add(5, 10));
 
-//! returning a function and scoping
-
-function mynames(fname) {
-  const firstname = fname; //stores the first name from the const outside the first tunction
-  return function (sname) {
-    //returns the second name from the console.log then gives it to the second return
-    return `${firstname} ${sname}`; // <-- the second return that gets returned then console logged with the fname and sname together.
-  };
-}
-const fullname = mynames("Mark Kenneth");
-console.log(fullname("Ferrer"));
-
 //! using spread parameter
 function total(...addthem) {
   const result = addthem.reduce((prev, next) => prev + next);
@@ -83,6 +71,7 @@ console.log(toAdd);
 
 //car part using return function
 
+//!return function
 function carstats(brand) {
   const carbrand = brand;
   return function (platenum) {

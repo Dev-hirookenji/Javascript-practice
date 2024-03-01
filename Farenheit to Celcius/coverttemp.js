@@ -109,10 +109,3 @@ function hello(yourname, age) {
 }
 hello("Ken", 23);
 hello("Jessa", 24);
-
-let answerrr = 0;
-
-function add() {
-  return (answerrr = 1 + 2);
-}
-console.log(add(answerrr));

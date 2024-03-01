@@ -1,17 +1,17 @@
 //!practicing callbacks
 
-// function callback(call_me) {
+// function callback(callme) {
 //   setTimeout(() => {
-//     console.log("Jessa");
+//     console.log("Mark");
 //   }, 2500);
-//   call_me;
+//   callme();
 // }
-// function thecall() {
+// function call() {
 //   setTimeout(() => {
-//     console.log("Hello ");
-//   }, 1500);
+//     console.log("Hello");
+//   }, 1000);
 // }
-// callback(thecall());
+// callback(call);
 
 //! callback function
 // const foods = {
@@ -70,3 +70,5 @@
 //   .finally(() => {
 //     console.log("Thank you for using the program");
 //   });
+
+//abcde reverse

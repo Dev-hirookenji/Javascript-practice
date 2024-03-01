@@ -1,4 +1,4 @@
-//async await
+//! using async await
 const url = "https://api.genderize.io?name=peter";
 
 async function apicall() {
@@ -7,3 +7,16 @@ async function apicall() {
   console.log(data);
 }
 apicall();
+
+//!using fetch api
+// fetch("https://api.genderize.io?name=peter")
+//   .then((response) => {
+//     console.log("successful", response);
+//     return response.json();
+//   })
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((err) => {
+//     console.log("error", err);
+//   });

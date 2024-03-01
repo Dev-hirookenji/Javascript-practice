@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="myFunction()">Try me</button>
+    <p id="display"></p>
+    <script>
+      function myFunction() {
+        let person = prompt("Enter your name", "");
+        if (person != null) {
+          document.getElementById("display").innerHTML = `Hello ${person}!`;
+        }
+      }
+    </script>
+  </body>
+</html>
