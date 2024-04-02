@@ -1,13 +1,13 @@
-let items = [
-  { name: "item1", id: 1, isAvailable: true, price: 100 },
-  { name: "item2", id: 2, isAvailable: false, price: 99 },
-];
+// let items = [
+//   { name: "item1", id: 1, isAvailable: true, price: 100 },
+//   { name: "item2", id: 2, isAvailable: false, price: 99 },
+// ];
 
-const availableitems = items.filter((item) => item.isAvailable);
-const itemprice = availableitems.reduce((sum, item) => sum + item.price, 0);
+// const availableitems = items.filter((item) => item.isAvailable);
+// const itemprice = availableitems.reduce((sum, item) => sum + item.price, 0);
 
-console.log(availableitems);
-console.log(itemprice);
+// console.log(availableitems);
+// console.log(itemprice);
 
 //!new
 const products = [
@@ -22,17 +22,31 @@ const getAvailability = products.filter((items) => {
   //!filter to filter, map to list all, some and every are almost same in functionality will show boolean results.
   return items.isAvailable;
 });
-const totalprice = getAvailability.reduce((sum, items) => sum + items.Price, 0);
-console.log(getAvailability);
-console.log(totalprice);
+// const totalprice = getAvailability.reduce((sum, items) => sum + items.Price, 0);
+// console.log(getAvailability);
+// console.log(totalprice);
 
-//!find
-const findproduct = products.find((items) => {
-  return items.Name === "Hotdog";
-});
-console.log(findproduct);
+// //!find
+// const findproduct = products.find((items) => {
+//   return items.Name === "Hotdog";
+// });
+// console.log(findproduct);
 
-//!forEach Similar to for loop
-products.forEach((item) => {
-  console.log(item);
-});
+// //!forEach Similar to for loop
+// products.forEach((item) => {
+//   console.log(item);
+// });
+function add(num1, num2) {
+  return num1 + num2;
+}
+console.log(add(23, 2));
+
+function myname(firstname) {
+  const fname = firstname;
+  return function (lastname) {
+    return `${fname} ${lastname}`;
+  };
+}
+
+const fullname = myname("Mark Kenneth");
+console.log(fullname("Ferrer"));
