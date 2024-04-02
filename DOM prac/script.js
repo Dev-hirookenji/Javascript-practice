@@ -1,5 +1,8 @@
 const app = document.getElementById("app");
-app.innerHTML = `<ul id="lists"></ul>`;
+app.innerHTML = `<ul id="lists">
+<li>"kiss"</li>
+<li>"bangus"</li>
+</ul>`;
 
 //creating forms using js dom
 
@@ -19,23 +22,25 @@ app.innerHTML += createdPassword;
 const data = ["Samsung A55", "Bag", "Sipag"];
 const fragment = document.createDocumentFragment();
 
-data.forEach((list) => {
+data.forEach((item) => {
   const li = document.createElement("li");
-  li.className = "list-items";
-  li.innerText = list;
+  li.className = "list-item";
+  li.innerText = item;
   fragment.append(li);
 });
 
-const ulfromid = document.getElementById("lists");
-ulfromid.append(fragment);
+const selectQuery = document.querySelector("#lists");
+selectQuery.append(fragment);
 
-const getbyclassname = ulfromid.getElementsByClassName("list-items");
-console.log(getbyclassname);
+const newitem = document.createElement("li");
+newitem.className = "list-item";
+newitem.innerText = "New item";
+selectQuery.append(newitem);
 
-const getbytagname = ulfromid.getElementsByTagName("li");
-console.log(getbytagname);
-//!adding new to the list
-const newlistofitem = document.createElement("li");
-newlistofitem.className = "list-items";
-newlistofitem.innerText = "Dreams";
-ulfromid.append(newlistofitem);
+//!looping through
+const list = document.querySelectorAll("#lists li");
+for (const items of list) {
+  console.log(items);
+}
+
+//!
