@@ -26,16 +26,16 @@ data.forEach((item) => {
   const li = document.createElement("li");
   li.className = "list-item";
   li.innerText = item;
-  fragment.append(li);
+  fragment.appendChild(li);
 });
 
-const selectQuery = document.querySelector("#lists");
-selectQuery.append(fragment);
+const getQuery = document.querySelector("#lists");
+getQuery.append(fragment);
 
-const newitem = document.createElement("li");
-newitem.className = "list-item";
-newitem.innerText = "New item";
-selectQuery.append(newitem);
+const newItem = document.createElement("li");
+newItem.className = "list-item";
+newItem.innerText = "Hello World";
+getQuery.append(newItem);
 
 //!looping through
 const list = document.querySelectorAll("#lists li");
