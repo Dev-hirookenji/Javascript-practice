@@ -70,5 +70,3 @@
 //   .finally(() => {
 //     console.log("Thank you for using the program");
 //   });
-
-//abcde reverse
