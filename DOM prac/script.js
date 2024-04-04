@@ -25,21 +25,21 @@ const fragment = document.createDocumentFragment();
 data.forEach((item) => {
   const li = document.createElement("li");
   li.className = "list-item";
-  li.innerText = item;
+  li.innerHTML = item;
   fragment.appendChild(li);
 });
 
-const getQuery = document.querySelector("#lists");
-getQuery.append(fragment);
+const querySelect = document.querySelector("#lists");
+querySelect.append(fragment);
 
 const newItem = document.createElement("li");
 newItem.className = "list-item";
-newItem.innerText = "Hello World";
-getQuery.append(newItem);
+newItem.innerText = "Good Item";
+querySelect.append(newItem);
 
 //!looping through
 const list = document.querySelectorAll("#lists li");
-for (const items of list) {
+for (items of list) {
   console.log(items);
 }
 
