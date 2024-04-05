@@ -70,15 +70,15 @@ app.innerHTML = `
 
 // //!preventDefault();
 // const form = document.querySelector("form");
-// const email = form.querySelector('input[type="email"]');
-// const checkbox = form.querySelector('input[type="checkbox"]');
+// const email = document.querySelector('input[type="email"]');
+// const checkbox = document.querySelector('input[type="checkbox"]');
 
-// function submitHandler(event) {
+// function clickhandler(event) {
 //   event.preventDefault();
 //   console.log(email.value, checkbox.checked);
 // }
 
-// form.addEventListener("submit", submitHandler);
+// form.addEventListener("submit", clickhandler);
 
 // //! event delegation
 // const list = document.querySelector("#list");
