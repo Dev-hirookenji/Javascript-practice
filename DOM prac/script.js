@@ -2,22 +2,20 @@ const app = document.getElementById("app");
 app.innerHTML = `<ul id="lists">
 <li>"kiss"</li>
 <li>"bangus"</li>
-</ul>
+</ul>`;
 
-`;
-
-// const div = document.createElement("div");
-// app.innerHTML = `
-//   <form>
-//     <label>
-//     Email
-//     <input type="email">
-//     </label></br>
-//     <label>
-//     Check me out
-//     <input type="checkbox">
-//     </label>
-//   </form>`;
+const div = document.createElement("div");
+app.innerHTML = `
+  <form>
+    <label>
+    Email
+    <input type="email">
+    </label></br>
+    <label>
+    Check me out
+    <input type="checkbox">
+    </label>
+  </form>`;
 
 //creating forms using js dom
 
@@ -34,24 +32,24 @@ app.innerHTML = `<ul id="lists">
 // app.innerHTML += createdPassword;
 //list
 
-const data = ["Samsung A55", "Bag", "Sipag"];
-const fragment = document.createDocumentFragment();
+// const data = ["Samsung A55", "Bag", "Sipag"];
+// const fragment = document.createDocumentFragment();
 
-data.forEach((item) => {
-  const li = document.createElement("li");
-  li.className = "list-item";
-  li.innerText = item;
-  fragment.append(li);
-});
+// data.forEach((item) => {
+//   const li = document.createElement("li");
+//   li.className = "list-item";
+//   li.innerText = item;
+//   fragment.append(li);
+// });
 
-const selector = document.querySelector("#lists");
-selector.append(fragment);
+// const selector = document.querySelector("#lists");
+// selector.append(fragment);
 
-const newItem = document.createElement("li");
-newItem.className = "list-item";
-newItem.innerText = "New Item";
+// const newItem = document.createElement("li");
+// newItem.className = "list-item";
+// newItem.innerText = "New Item";
 
-selector.append(newItem);
+// selector.append(newItem);
 
 // //!looping through
 // const list = document.querySelectorAll("#lists li");
