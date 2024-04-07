@@ -1,9 +1,9 @@
 const app = document.getElementById("app");
 app.innerHTML = `
-<button type="button" >Add Item</button>
-<ul id="lists">
-<li>"kiss"</li>
-<li>"bangus"</li>
+<button type="button">Add Item</button>
+<ul id="list">
+<li>Item 1</li>
+<li>Item 2</li>
 </ul>`;
 
 // const div = document.createElement("div");
@@ -53,13 +53,13 @@ app.innerHTML = `
 
 // selector.append(newItem);
 
-// //!looping through
+//!looping through
 // const list = document.querySelectorAll("#lists li");
 // for (items of list) {
 //   console.log(items);
 // }
 
-// //!creating a button using dom
+//!creating a button using dom
 // const button = document.createElement("button");
 // button.innerText = "Click me";
 // app.append(button);
@@ -67,10 +67,10 @@ app.innerHTML = `
 // function handleclick() {
 //   console.log("clicked");
 // }
-// //? addEventListener
+//? addEventListener
 // button.addEventListener("click", handleclick);
 
-// //!preventDefault();
+//!preventDefault();
 // const form = document.querySelector("form");
 // const email = document.querySelector('input[type="email"]');
 // const checkbox = document.querySelector('input[type="checkbox"]');
@@ -82,15 +82,20 @@ app.innerHTML = `
 
 // form.addEventListener("submit", clickhandler);
 
-// //! event delegation
+//! event delegation
 const button = document.querySelector("button");
 const list = document.querySelector("#list");
 
-function handleclick(event) {
+function handleClick(event) {
   console.log(event.target.innerText);
 }
 
+list.addEventListener("click", handleClick);
+
 button.addEventListener("click", () => {
-  const items = list.querySelectorAll("li");
+  const item = list.querySelectorAll("li");
   const li = document.createElement("li");
+  li.innerText = `Item ${item.length + 1}`;
+  list.appendChild(li);
+  li.addEventListener("click", handleClick);
 });
