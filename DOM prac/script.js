@@ -1,21 +1,23 @@
 const app = document.getElementById("app");
-app.innerHTML = `<ul id="lists">
+app.innerHTML = `
+<button type="button" >Add Item</button>
+<ul id="lists">
 <li>"kiss"</li>
 <li>"bangus"</li>
 </ul>`;
 
-const div = document.createElement("div");
-app.innerHTML = `
-  <form>
-    <label>
-    Email
-    <input type="email">
-    </label></br>
-    <label>
-    Check me out
-    <input type="checkbox">
-    </label>
-  </form>`;
+// const div = document.createElement("div");
+// app.innerHTML = `
+//   <form>
+//     <label>
+//     Email
+//     <input type="email">
+//     </label></br>
+//     <label>
+//     Check me out
+//     <input type="checkbox">
+//     </label>
+//   </form>`;
 
 //creating forms using js dom
 
@@ -81,9 +83,14 @@ app.innerHTML = `
 // form.addEventListener("submit", clickhandler);
 
 // //! event delegation
-// const list = document.querySelector("#list");
-// const items = list.querySelectorAll("li");
+const button = document.querySelector("button");
+const list = document.querySelector("#list");
 
-// function handleclick(event) {
-//   console.log(event.target.innerText);
-// }
+function handleclick(event) {
+  console.log(event.target.innerText);
+}
+
+button.addEventListener("click", () => {
+  const items = list.querySelectorAll("li");
+  const li = document.createElement("li");
+});
