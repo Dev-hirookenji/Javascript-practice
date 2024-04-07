@@ -83,19 +83,24 @@ app.innerHTML = `
 // form.addEventListener("submit", clickhandler);
 
 //! event delegation
-const button = document.querySelector("button");
-const list = document.querySelector("#list");
+// const button = document.querySelector("button");
+// const list = document.querySelector("#list");
 
-function handleClick(event) {
-  console.log(event.target.innerText);
-}
+// function handleClick(event) {
+//   console.log(event.target.innerText);
+// }
 
-list.addEventListener("click", handleClick);
+// list.addEventListener("click", handleClick);
 
-button.addEventListener("click", () => {
-  const item = list.querySelectorAll("li");
-  const li = document.createElement("li");
-  li.innerText = `Item ${item.length + 1}`;
-  list.appendChild(li);
-  li.addEventListener("click", handleClick);
+// button.addEventListener("click", () => {
+//   const item = list.querySelectorAll("li");
+//   const li = document.createElement("li");
+//   li.innerText = `Item ${item.length + 1}`;
+//   list.appendChild(li);
+//   li.addEventListener("click", handleClick);
+// });
+
+//! keyboard Events
+document.addEventListener("keydown", (event) => {
+  console.log(event.key, event.code);
 });
