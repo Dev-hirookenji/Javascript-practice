@@ -163,16 +163,25 @@ const form = document.forms.formname;
 
 function handleSubmit(event) {
   event.preventDefault();
+  const formData = new FormData(event.target);
 
   //?new way and easier
-  // const formData = new FormData(event.target);
-  // const asString = new URLSearchParams(formData).toString();
-  // console.log(asString);
+  const asString = new URLSearchParams(formData).toString();
+  console.log(asString);
 
   //?Json Approach PREFERRED
-  const formData = new FormData(event.target);
   const asJson = JSON.stringify(Object.fromEntries(formData)); // * Remove JSON.stringify to view json
   console.log(asJson);
+
+  //! api server tutorial
+  //   fetch("/fakeapi", {
+  //     method: "post",
+  //     headers: {
+  //       //"Content-Type": "application/x-www-form-urlencoded"
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: asJSON,
+  //   });
 }
 
 form.addEventListener("submit", handleSubmit);
