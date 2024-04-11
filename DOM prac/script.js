@@ -1,10 +1,20 @@
 const app = document.getElementById("app");
+
+const div = document.createElement("div");
 app.innerHTML = `
-<button type="button">Add Item</button>
-<ul id="list">
-<li>Item 1</li>
-<li>Item 2</li>
-</ul>`;
+  <form name="first">
+  <label>
+  Insert name:
+  <input type="text" name="fullname">
+  </label>
+  </form>
+`;
+// app.innerHTML = `
+// <button type="button">Add Item</button>
+// <ul id="list">
+// <li>Item 1</li>
+// <li>Item 2</li>
+// </ul>`;
 
 // const div = document.createElement("div");
 // app.innerHTML = `
@@ -101,6 +111,19 @@ app.innerHTML = `
 // });
 
 //! keyboard Events
-document.addEventListener("keydown", (event) => {
-  console.log(event.key, event.code);
-});
+// document.addEventListener("keydown", (event) => {
+//   console.log(event.key, event.code);
+// });
+
+//!forms
+
+const form = document.forms.first;
+console.log(form);
+
+const names = form.elements.fullname;
+
+function handleinput(event) {
+  console.log(event.target.value);
+}
+
+form.addEventListener("input", handleinput);
