@@ -163,24 +163,13 @@ const form = document.forms.formname;
 
 function handleSubmit(event) {
   event.preventDefault();
-  //console.log([...new FormData(event.target)]);
 
-  //?Query String approach
-  //like URL typashi
-  //!Older Way idk why the f I did this lol
-  // const formData = new FormData(event.target);
-  // const data = [...formData.entries()];
-  // const asString = data
-  //   .map((x) => `x${encodeURIComponent(x[0])}=${encodeURIComponent(x[1])}`)
-  //   .join("&");
-  // console.log(asString);
-
-  //?newer way and easier
+  //?new way and easier
   // const formData = new FormData(event.target);
   // const asString = new URLSearchParams(formData).toString();
   // console.log(asString);
 
-  //?Json Approach
+  //?Json Approach PREFERRED
   const formData = new FormData(event.target);
   const asJson = JSON.stringify(Object.fromEntries(formData)); // * Remove JSON.stringify to view json
   console.log(asJson);
