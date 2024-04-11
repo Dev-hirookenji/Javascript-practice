@@ -8,6 +8,11 @@ app.innerHTML = `
   Insert name:
   <input type="text" name="fullname">
   </label>
+  <select>
+    <option value="pizza">Pizza</option>
+    <option value="hotdog">Hotdog</option>
+    <option value="Burger">Burger</option>
+  </select>
   <button type="submit">Submit</button>
   </form>
 `;
@@ -120,3 +125,15 @@ app.innerHTML = `
 // });
 
 //!forms
+const form = document.forms.formname;
+
+function handleSubmit(event) {
+  event.preventDefault();
+  console.log(...new FormData(event.target));
+}
+
+function handleFormData(event) {
+  console.log(event.formData);
+}
+form.addEventListener("submit", handleSubmit);
+form.addEventListener("formdata", handleFormData);
