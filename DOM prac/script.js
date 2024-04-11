@@ -8,11 +8,27 @@ app.innerHTML = `
   Insert name:
   <input type="text" name="fullname">
   </label>
-  <select>
+  <select name="foods">
     <option value="pizza">Pizza</option>
     <option value="hotdog">Hotdog</option>
     <option value="Burger">Burger</option>
   </select>
+  <div>
+    <p>What Size?</p>
+    <label>Small
+      <input type="radio" name="size" value="small">
+    </label>
+    <label>Medium
+      <input type="radio" name="size" value="medium">
+    </label>
+    <label>Large
+      <input type="radio" name="size" value="large">
+    </label>
+  </div>
+  <label>
+    <p>Quantity</p>
+    <input type="number" name="quantity" value="1">
+  </label>
   <button type="submit">Submit</button>
   </form>
 `;
@@ -124,16 +140,30 @@ app.innerHTML = `
 //   console.log(event.key, event.code);
 // });
 
-//!forms
+//!form submit and formdata
+// const form = document.forms.formname;
+
+// function handleSubmit(event) {
+//   event.preventDefault();
+//   console.log(...new FormData(event.target));
+// }
+
+// function handleFormData(event) {
+//   console.log([...event.formData]);
+//   const entries = event.formData.entries();
+//   for (const entry of entries) {
+//     console.log(entry);
+//   }
+// }
+// form.addEventListener("submit", handleSubmit);
+// form.addEventListener("formdata", handleFormData);
+
+//!Transforming data for the server
 const form = document.forms.formname;
 
 function handleSubmit(event) {
   event.preventDefault();
-  console.log(...new FormData(event.target));
+  console.log([...new FormData(event.target)]);
 }
 
-function handleFormData(event) {
-  console.log(event.formData);
-}
 form.addEventListener("submit", handleSubmit);
-form.addEventListener("formdata", handleFormData);
