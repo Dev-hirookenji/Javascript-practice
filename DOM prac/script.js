@@ -1,14 +1,18 @@
 const app = document.getElementById("app");
 
+//? forms tutorial
 const div = document.createElement("div");
 app.innerHTML = `
-  <form name="first">
+  <form name="formname">
   <label>
   Insert name:
   <input type="text" name="fullname">
   </label>
+  <button type="submit">Submit</button>
   </form>
 `;
+
+//? Orig
 // app.innerHTML = `
 // <button type="button">Add Item</button>
 // <ul id="list">
@@ -103,10 +107,10 @@ app.innerHTML = `
 // list.addEventListener("click", handleClick);
 
 // button.addEventListener("click", () => {
-//   const item = list.querySelectorAll("li");
+//   const items = document.querySelectorAll("li");
 //   const li = document.createElement("li");
-//   li.innerText = `Item ${item.length + 1}`;
-//   list.appendChild(li);
+//   li.innerText = `Item ${items.length + 1}`;
+//   list.append(li);
 //   li.addEventListener("click", handleClick);
 // });
 
@@ -116,14 +120,3 @@ app.innerHTML = `
 // });
 
 //!forms
-
-const form = document.forms.first;
-console.log(form);
-
-const names = form.elements.fullname;
-
-function handleinput(event) {
-  console.log(event.target.value);
-}
-
-form.addEventListener("input", handleinput);
