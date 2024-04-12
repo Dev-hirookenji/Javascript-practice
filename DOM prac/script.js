@@ -1,37 +1,62 @@
 const app = document.getElementById("app");
 
-//? forms tutorial
-const div = document.createElement("div");
+//?input tutorial
 app.innerHTML = `
-  <form name="formname">
+<form name="example">
   <label>
-  Insert name:
-  <input type="text" name="fullname">
+    Blue
+    <input type="radio" name="color" value="blue">
   </label>
-  <select name="foods">
-    <option value="pizza">Pizza</option>
-    <option value="hotdog">Hotdog</option>
-    <option value="Burger">Burger</option>
-  </select>
-  <div>
-    <p>What Size?</p>
-    <label>Small
-      <input type="radio" name="size" value="small">
-    </label>
-    <label>Medium
-      <input type="radio" name="size" value="medium">
-    </label>
-    <label>Large
-      <input type="radio" name="size" value="large">
-    </label>
-  </div>
   <label>
-    <p>Quantity</p>
-    <input type="number" name="quantity" value="1">
+    Red
+    <input type="radio" name="color" value="red">
   </label>
-  <button type="submit">Submit</button>
-  </form>
-`;
+  <label>
+    Green
+    <input type="radio" name="color" value="green">
+  </label>
+</form>`;
+
+const form = document.forms.example;
+const radios = form.elements.color;
+console.log(radios);
+
+radios.forEach((item) => {
+  console.log(item);
+});
+
+//? forms tutorial
+// const div = document.createElement("div");
+// app.innerHTML = `
+//   <form name="formname">
+//   <label>
+//   Insert name:
+//   <input type="text" name="fullname">
+//   </label>
+//   <select name="foods">
+//     <option value="pizza">Pizza</option>
+//     <option value="hotdog">Hotdog</option>
+//     <option value="Burger">Burger</option>
+//   </select>
+//   <div>
+//     <p>What Size?</p>
+//     <label>Small
+//       <input type="radio" name="size" value="small">
+//     </label>
+//     <label>Medium
+//       <input type="radio" name="size" value="medium">
+//     </label>
+//     <label>Large
+//       <input type="radio" name="size" value="large">
+//     </label>
+//   </div>
+//   <label>
+//     <p>Quantity</p>
+//     <input type="number" name="quantity" value="1">
+//   </label>
+//   <button type="submit">Submit</button>
+//   </form>
+// `;
 
 //? Orig
 // app.innerHTML = `
@@ -159,29 +184,29 @@ app.innerHTML = `
 // form.addEventListener("formdata", handleFormData);
 
 //!Transforming data for the server
-const form = document.forms.formname;
+// const form = document.forms.formname;
 
-function handleSubmit(event) {
-  event.preventDefault();
-  const formData = new FormData(event.target);
+// function handleSubmit(event) {
+//   event.preventDefault();
+//   const formData = new FormData(event.target);
 
-  //?new way and easier
-  const asString = new URLSearchParams(formData).toString();
-  console.log(asString);
+//   //?new way and easier
+//   const asString = new URLSearchParams(formData).toString();
+//   console.log(asString);
 
-  //?Json Approach PREFERRED
-  const asJson = JSON.stringify(Object.fromEntries(formData)); // * Remove JSON.stringify to view json
-  console.log(asJson);
+//   //?Json Approach PREFERRED
+//   const asJson = JSON.stringify(Object.fromEntries(formData)); // * Remove JSON.stringify to view json
+//   console.log(asJson);
 
-  //! api server tutorial
-  //   fetch("/fakeapi", {
-  //     method: "post",
-  //     headers: {
-  //       //"Content-Type": "application/x-www-form-urlencoded"
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: asJSON,
-  //   });
-}
+//! api server tutorial
+//   fetch("/fakeapi", {
+//     method: "post",
+//     headers: {
+//       //"Content-Type": "application/x-www-form-urlencoded"
+//       "Content-Type": "application/json",
+//     },
+//     body: asJSON,
+//   });
+// }
 
-form.addEventListener("submit", handleSubmit);
+// form.addEventListener("submit", handleSubmit);
